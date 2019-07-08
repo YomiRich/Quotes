@@ -23,9 +23,13 @@ export class QuoteComponent implements OnInit {
   toogleDetails(index){
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
 }
-completeGoal(isComplete, index){
+deleteGoal(isComplete, index){
   if (isComplete) {
-    this.quotes.splice(index,1);
+    let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+
+    if (toDelete){
+      this.quotes.splice(index,1)
+    }
   }
 }
   constructor() { }

@@ -6,6 +6,6 @@
           <div *ngFor='let quote of quotes;let i = index'>
               <li >{{quote.author}} posted on {{quote.postedDate|date}}</li> 
               <button  (click)='toogleDetails(i)'>Show Details</button>
-              <app-quote-detail *ngIf="quote.showAuthor"[quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+              <app-quote-detail *ngIf="quote.showAuthor"[quote]='quote' (isComplete) = 'deleteGoal($event,i)'></app-quote-detail>
           </div>
       </ul>
