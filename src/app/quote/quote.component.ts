@@ -15,13 +15,18 @@ export class QuoteComponent implements OnInit {
   //   {id:3,quote:'I am not a great programmer; I am just a good programmer with great habits.', author:'― Kent Beck',postedby:'Yomi Rich'},
       
   // ];
-  new Quote(1,'\"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.\" ','― Martin Fowler','Yomi Rich'),
-    new Quote(2,'\" When you got born again your past was not erased, it became non-existent.\" ','― Pastor Chris Oyakhilome','Yomi Rich'),
-    new Quote(3,'\" I am not a great programmer; I am just a good programmer with great habits.\" ','― Kent Beck','Yomi Rich'),
+  new Quote(1,'\"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.\" ','― Martin Fowler','Yomi Rich', new Date(2019,3,14)),
+    new Quote(2,'\" When you got born again your past was not erased, it became non-existent.\" ','― Pastor Chris Oyakhilome','Yomi Rich', new Date(2019,3,14)),
+    new Quote(3,'\" I am not a great programmer; I am just a good programmer with great habits.\" ','― Kent Beck','Yomi Rich', new Date(2019,3,14)),
       
   ];
   toogleDetails(index){
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+}
+completeGoal(isComplete, index){
+  if (isComplete) {
+    this.quotes.splice(index,1);
+  }
 }
   constructor() { }
 
