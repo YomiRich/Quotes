@@ -1,7 +1,8 @@
 // export class Quote {
 //     id: number;
+// quote: string;
 //     author: string;
-//     quote: string;
+//     
 //     postedBy: string;
     
 // }

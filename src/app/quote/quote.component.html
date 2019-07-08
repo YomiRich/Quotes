@@ -1,11 +1,15 @@
 
-      <h1>Quote Creator</h1>
-      <hr>
-      
-      <ul>
-          <div *ngFor='let quote of quotes;let i = index'>
-              <li >{{quote.author}} posted on {{quote.postedDate|date}}</li> 
-              <button  (click)='toogleDetails(i)'>Show Details</button>
-              <app-quote-detail *ngIf="quote.showAuthor"[quote]='quote' (isComplete) = 'deleteGoal($event,i)'></app-quote-detail>
-          </div>
-      </ul>
+ <h1>Quote Creator</h1>
+
+ 
+  <hr>
+  <ul>
+    <div *ngFor='let quote of quotes;let i = index'>
+      <li>{{quote.author}}{{quote.completeDate|date}}</li>
+      <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+      <button (click)='toggleDetails(i)'>Toggle Details</button>
+    </div>
+  </ul>
+
+
+
