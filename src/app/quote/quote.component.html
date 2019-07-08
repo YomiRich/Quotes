@@ -5,30 +5,32 @@
     <img width="600" alt="Programmer Quote" src="https://www.bigcommerce.com/blog/wp-content/uploads/2014/07/JuneBlog_Quotes_3676_SJ.jpg">
   </div>
   <hr>
-  <div class="row">
-    <div class="col-md-6 background">
-      <hr />
-      <h2 class="text-center">Top 3 Qoutes</h2>
-      <ul>
-        <div *ngFor="let quote of quotes; let i = index">
-          <li>
-            {{ quote.author }} <br />
-            {{ quote.completeDate | date }}
-          </li>
-          <app-quote-detail
-            *ngIf="quote.showAuthor"
-            [quote]="quote"
-            (isComplete)="deleteQuote($event, i)"
-          ></app-quote-detail>
-          <button (click)="toggleDetails(i)" class="btn-">
-            Toggle Details
-          </button>
+  <div class="panel-group">
+      <div class="row">
+          <div class="col-md-6 panel panel-info">
+            <hr>
+            <h2 class="panel-heading" class="text-center">Top 3 Qoutes</h2>
+            <ul>
+              <div *ngFor="let quote of quotes; let i = index">
+                <li>
+                  {{ quote.author }} <br />
+                  {{ quote.completeDate | date }}
+                </li>
+                <app-quote-detail
+                  *ngIf="quote.showAuthor"
+                  [quote]="quote"
+                  (isComplete)="deleteQuote($event, i)"
+                ></app-quote-detail>
+                <button class="panel-body"(click)="toggleDetails(i)" class="btn-info">
+                  Toggle Details
+                </button>
+              </div>
+            </ul>
+          </div>
+          <div class="col-md-6">
+              <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+              
+            </div>
         </div>
-      </ul>
-    </div>
-    <div class="col-md-6">
-        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-        
-      </div>
   </div>
 </div>
