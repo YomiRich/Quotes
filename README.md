@@ -36,3 +36,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ##Contact information
 ymueni@gmail.com
+
+##Licence
+This software is Licensed under MIT license Copyright (2019) YomiRich
