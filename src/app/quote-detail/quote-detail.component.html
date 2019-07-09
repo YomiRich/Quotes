@@ -1,5 +1,10 @@
 
-<p>{{quote.quote}}</p>
-<p>{{quote.completeDate|dateCount}} </p>
-<button (click)= 'quoteDelete(true)'>Delete</button>
-
+    <p>{{quote.quote}}</p>
+    <p>{{quote.completeDate|dateCount}} </p>
+    <button (click)= 'quoteDelete(true)'>Delete</button>
+    <p>
+            <button  (click)="likeUp()">{{likeup}} <img src="https://www.trzcacak.rs/myfile/detail/7-75770_free-icons-png-thumbs-up-icon-blue.png"  height="30px"></button>
+        </p>
+        <p>
+            <button (click)="likeDown()">{{likedown}} <img src="https://image.shutterstock.com/image-illustration/thumb-down-raster-icon-flat-260nw-607272941.jpg" height="30px"></button>
+        </p>

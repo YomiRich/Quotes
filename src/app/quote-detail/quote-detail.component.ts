@@ -14,6 +14,18 @@ export class QuoteDetailComponent implements OnInit {
     this.isComplete.emit(complete);
   }
   
+  likeup = 0;
+  likedown = 0;
+
+  likeUp(){
+    this.likeup = this.likeup + 1;
+  }
+
+  likeDown(){
+    this.likedown = this.likedown + 1;
+  }
+
+
   constructor() { }
 
   ngOnInit() {
