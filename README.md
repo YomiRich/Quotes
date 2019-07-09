@@ -4,11 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Description
 
-This is web app that eneables the user to view quotes, create quotes, upvote and downvote quotes and delete quotes.
+This is web app that enables the user to view quotes, create quotes, upvote and downvote quotes and delete quotes.
 
 ## Built By
 
-Yomi Rich
+Yomi Rich.
 
 ## Development server
 
